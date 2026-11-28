@@ -86,3 +86,28 @@ html { scroll-padding-top: 94px; }
   .header { position: static; }
   html { scroll-padding-top: 8px; }
 }
+
+#themeToggle { font: 24px/1 sans-serif; }
+#themeToggle:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --cream: #191714;
+  --ink: #f4eee3;
+  --muted: #c3b9a8;
+  --gold: #e2bf78;
+  --soft: #302b24;
+  --line: #51483a;
+  --surface: #25221d;
+}
+[data-theme="dark"] .header { background: #191714ed; }
+[data-theme="dark"] .hero { background: radial-gradient(ellipse at 80% 15%, #393022, transparent 55%), var(--cream); }
+[data-theme="dark"] :is(.product, .detail-layout, .iconbtn, .filter, .cart, .close, .modalcontent select, .footer) {
+  background: var(--surface); color: var(--ink); border-color: var(--line);
+}
+[data-theme="dark"] :is(.links, .hero p, .trust div, .sub, .spec div, .footer p, .footer a, .copyright) { color: var(--muted); }
+[data-theme="dark"] :is(.trust b, .spec b, .price) { color: var(--ink); }
+[data-theme="dark"] :is(.pfoot, .copyright) { border-color: var(--line); }
+[data-theme="dark"] :is(.filter.active, .filter:hover, .cta, .add, .count) { background: var(--gold); color: var(--cream); }
+[data-theme="dark"] .detail-page > a { color: var(--gold); }
+[data-theme="dark"] .stock { color: #8cd6ab; }
+[data-theme="dark"] :is(.stock.out, .cartline button) { color: #eca79a; }
